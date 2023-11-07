@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LogInFragment">
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Email"
+        android:fontFamily="@font/gotham_book"
+        android:layout_marginTop="60dp"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.31" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:textSize="18sp"
+        android:inputType="textPassword"
+        android:fontFamily="@font/gotham_book"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:text="INGRESAR"
+        android:fontFamily="@font/gotham_book"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="#F0F4F4"
+        android:backgroundTint="#0F4CB6"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:paddingVertical="10dp"
+        android:src="@drawable/logo_bienvenida"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

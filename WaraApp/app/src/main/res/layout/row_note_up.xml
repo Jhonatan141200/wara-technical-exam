@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardElevation="4dp"
+    android:layout_margin="6dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageViewNote"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ic_note"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tviName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="Esta es un nota"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#4C4F60"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/imageViewNote"
+            app:layout_constraintEnd_toStartOf="@+id/tviDate"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/imageViewNote"
+            app:layout_constraintTop_toTopOf="@+id/imageViewNote" />
+
+        <TextView
+            android:id="@+id/tviDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="today"
+            android:textColor="#8C8FA0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tviName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tviName" />
+
+        <TextView
+            android:id="@+id/tviDesc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Esta es un nota\nEsta es un nota"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#8C8FA0"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageViewNote"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewNote"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

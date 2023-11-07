@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "20b92616-5a91-47f4-8071-8539abe2458a",
+		"name": "WARA-API-POSTMAN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15626303"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \r\n  \"username\": \"jhona141200@gmail.com\",\r\n  \"password\": \"Wara$.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "EMPLOYEE",
+			"item": [
+				{
+					"name": "Employees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/api/employee/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"employee",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Tathiana\",\r\n    \"lastname\": \"Sanchez Ventura\",\r\n    \"dni\": \"80431892\",\r\n    \"age\": 32\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/api/employee/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"employee",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{   \"id\": 12,\r\n    \"firstname\": \"Tathy\",\r\n    \"lastname\": \"Hernandez Sanchez\",\r\n    \"dni\": \"80431894\",\r\n    \"age\": 34\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost/api/employee/update",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"api",
+								"employee",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Employee",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7247/api/employee/delete/67",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7247",
+							"path": [
+								"api",
+								"employee",
+								"delete",
+								"67"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/note_navigation"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.vasquez.kotlinapp.ui.MainFragment"
+        android:label="Wara App"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_addNoteFragment"
+            app:destination="@id/addNoteFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment"
+        android:name="com.vasquez.kotlinapp.ui.AddNoteFragment"
+        android:label="Add Employee"
+        tools:layout="@layout/fragment_add_note" />
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.vasquez.kotlinapp.ui.EditNoteFragment"
+        android:label="Edit Employee"
+        tools:layout="@layout/fragment_edit_note" >
+        <action
+            android:id="@+id/action_editNoteFragment_to_noteDialogFragment"
+            app:destination="@id/noteDialogFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/noteDialogFragment"
+        android:name="com.vasquez.kotlinapp.ui.NoteDialogFragment"
+        android:label="NoteDialogFragment" />
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="com.vasquez.kotlinapp.ui.LogInFragment"
+        android:label="Wara App"
+        tools:layout="@layout/fragment_log_in" >
+        <action
+            android:id="@+id/action_logInFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+</navigation>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "e6HP1Wn77KaANQHFkpPd9rBGD8zhKT5l3kYlQ/upA9A=",
+  "Source": "WARA_API",
+  "BasePath": "_content/WARA_API",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
