@@ -7,7 +7,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
 
 /**
- * @author Eduardo Medina
+ * @author Vasquez Reyna J
  */
 class NoteDialogFragment : DialogFragment() {
 

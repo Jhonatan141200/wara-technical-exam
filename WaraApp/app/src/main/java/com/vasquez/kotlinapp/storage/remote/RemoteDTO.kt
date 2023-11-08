@@ -31,15 +31,13 @@ data class EmployeeDTO(
 
 //request
 data class LogInRaw(val username: String?, val password: String?)
-data class EmployeeRaw(val firstname: String?,
-                     val lastname: String?,
-                     val dni: String?,
-                     val age: Int?)
+data class EmployeeRaw( val firstname: String?,
+                        val lastname: String?,
+                        val dni: String?,
+                        val age: Int?)
 
 //response
 
 data class LogInResponse(val msg: String?, val status: Int?, val data: UserDTO?)
-//class LogInResponse(msg:String?,status:Int?,val data:UserDTO?):BaseResponse(msg,status)
-
 data class EmployeeResponse(val msg: String?, val status: Int?, val data: List<EmployeeDTO>?)
 data class ResponseOfConsult(val msg: String?, val status: Int?)

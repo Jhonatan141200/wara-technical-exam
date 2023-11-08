@@ -43,8 +43,6 @@ object NoteApiClient {
 
     interface ServicesApi {
 
-        //@POST("/api/login")
-        //fun login(@Body raw: LogInRaw): Call<LogInResponse>
 
         @POST("/api/user/login")
         suspend fun login(@Body raw: LogInRaw): Response<LogInResponse>
@@ -60,7 +58,7 @@ object NoteApiClient {
 
 
         @POST("/api/employee/save")
-        fun saveEmployee(@Body raw: EmployeeRaw): Response<ResponseOfConsult>
+        suspend fun saveEmployee(@Body raw: EmployeeRaw): Response<ResponseOfConsult>
 
         //@PUT("/api/notes/{id}")
         //fun updateNote(@Path("id") noteId: String?, @Body raw: Any): Call<Any>

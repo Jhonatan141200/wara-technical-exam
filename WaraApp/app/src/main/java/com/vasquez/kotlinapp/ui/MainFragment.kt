@@ -5,6 +5,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
@@ -22,7 +24,7 @@ import com.vasquez.kotlinapp.viewmodel.EmployeeViewModel
 import com.vasquez.kotlinapp.viewmodel.EmployeeViewModelFactory
 
 /**
- * @author Eduardo Medina
+ * @author Vasquez Reyna J
  */
 class MainFragment : Fragment() {
 
@@ -37,7 +39,8 @@ class MainFragment : Fragment() {
     private val binding get() = _binding!!
 
     private var user: User? = null
-    private lateinit var adapter: NoteAdapter
+    private lateinit var employeeList: List<Employee>;
+    private lateinit var adapter: EmployeeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +52,8 @@ class MainFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentMainBinding.inflate(inflater, container, false)
+        val actionBar = (activity as AppCompatActivity).supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(false)
         return binding.root
     }
 
@@ -61,7 +66,7 @@ class MainFragment : Fragment() {
     private fun ui() {
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         adapter =
-            NoteAdapter(emptyList()) { itEmployee ->
+            EmployeeAdapter(emptyList()) { itEmployee ->
                 showMessage("item $itEmployee")
                 goToNote(itEmployee)
             }
@@ -71,10 +76,18 @@ class MainFragment : Fragment() {
             //TODO ir a crear nota
             goToAddNote()
         }
+        binding.edtBuscador.addTextChangedListener {
+            val dni = binding.edtBuscador.text.toString()
+            adapter.update(employeeList.filter {
+                it.dni.contains(dni);
+            })
+        }
+
     }
 
     private fun setObservers() {
         viewModel.notes.observe(viewLifecycleOwner, Observer {
+            employeeList = it;
             adapter.update(it)
         })
         viewModel.onError.observe(viewLifecycleOwner, Observer {

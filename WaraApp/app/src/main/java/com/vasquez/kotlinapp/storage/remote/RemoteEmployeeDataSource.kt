@@ -38,7 +38,7 @@ class RemoteEmployeeDataSource(private val noteApiClient: NoteApiClient) :
                 response.body()?.let {
                     when(it?.msg) {
                         "Emplead@ " + employeeRaw.firstname + " ingresado con éxito" -> ObjectResult.Success(it);
-                        "El dni " + employeeRaw.dni +" ya existe" -> ObjectResult.Failure(Exception("El Dni ingresado ya existe"))
+                        "El dni " + employeeRaw.dni +"  ya existe" -> ObjectResult.Failure(Exception("El Dni ingresado ya existe"))
                         else -> ObjectResult.Failure(Exception("Ocurrió un error"))
                     }
                 } ?: run {

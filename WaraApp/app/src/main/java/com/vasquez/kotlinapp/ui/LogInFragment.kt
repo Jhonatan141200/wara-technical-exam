@@ -51,8 +51,18 @@ class LogInFragment : Fragment() {
     }
 
     private fun validateForm(): Boolean {
-        if (binding.editTextTextEmailAddress.text.isEmpty()) return false
-        if (binding.editTextTextPassword.text.isEmpty()) return false
+        if (binding.editTextTextEmailAddress.text.isEmpty()) {
+            binding.editTextTextEmailAddress.error = "Campo email requerido"
+            return false
+        }
+        if (!Regex("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}\$").matches(binding.editTextTextEmailAddress.text.toString())) {
+            binding.editTextTextEmailAddress.error = "Ingrese un email válido"
+            return false
+        }
+        if (binding.editTextTextPassword.text.isEmpty()) {
+            binding.editTextTextPassword.error = "Campo password requerido"
+            return false
+        }
         return true
     }
 

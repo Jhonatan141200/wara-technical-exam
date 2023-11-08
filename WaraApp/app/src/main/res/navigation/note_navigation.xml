@@ -19,12 +19,12 @@
     </fragment>
     <fragment
         android:id="@+id/addNoteFragment"
-        android:name="com.vasquez.kotlinapp.ui.AddNoteFragment"
+        android:name="com.vasquez.kotlinapp.ui.AddEmployeeFragment"
         android:label="Add Employee"
-        tools:layout="@layout/fragment_add_note" />
+        tools:layout="@layout/fragment_add_employee" />
     <fragment
         android:id="@+id/editNoteFragment"
-        android:name="com.vasquez.kotlinapp.ui.EditNoteFragment"
+        android:name="com.vasquez.kotlinapp.ui.EditEmployeeFragment"
         android:label="Edit Employee"
         tools:layout="@layout/fragment_edit_note" >
         <action

@@ -12,7 +12,7 @@ import com.vasquez.kotlinapp.storage.AuthenticationRepository
 
 
 fun Fragment.nToast(value: String) {
-    Toast.makeText(requireContext(),value, Toast.LENGTH_LONG).show()
+    Toast.makeText(requireContext(),value, Toast.LENGTH_SHORT).show()
 }
 
 fun AuthenticationRepository.showCurrentThread() {
